@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8"/>
+    <title></title>
+</head>
+<body>
+    <table border="1">
+    <th:block th:fragment="addressList">
+        <hr>
+        <td>GlobalHack, 401 Pine Street St. Louis, MO 63102</td>
+    </th:block></table>
+
+    <table border="1">
+        <th:block th:fragment="pictures">
+            <hr>
+            <td><a th:href="@{https://securityintelligence.com/wp-content/uploads/2016/12/behind-the-scenes-at-a-capture-the-flag-ctf-competition-630x330.jpg}"></a></td>
+        </th:block>
+    </table>
+</body>
+</html>

@@ -3,16 +3,19 @@
 <head>
     <meta charset="UTF-8"/>
     <title>Coding Events</title>
+    <link th:href="@{/styles.css}" rel="stylesheet">
 </head>
 <body>
 
 <h1>All Events</h1>
 
-<ul>
-    <th:block th:each="event : ${events}">
-        <li th:text="${event}"></li>
+<table border="1">
+    <th>Event Title</th><th>Event Description</th><th>Event Location</th><th>Pictures</th></tr>
+    <th:block th:each="event : ${events.entrySet()}">
+        <tr><td th:text="${event.getKey()}"></td><td th:text="${event.getValue()}"></td>
+            <td th:replace="fragments :: addressList"></td><td th:replace="fragments :: pictures"></td></tr>
     </th:block>
-</ul>
+</table>
 
 </body>
 </html>
